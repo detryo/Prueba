@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PruebaDados" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p16-yY-NJR">
+                                <rect key="frame" x="356" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="88d-iD-HZa"/>
+                                    <constraint firstAttribute="height" constant="50" id="yys-L1-Qtr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addRow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b3G-kn-OkA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMU-SZ-a8F">
+                                <rect key="frame" x="8" y="580" width="398" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TNp-Dc-cdq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="SAVE CONFIG">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-BD-aPd">
+                                <rect key="frame" x="0.0" y="102" width="414" height="417"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="417" id="tei-jy-vsm"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiceCell" rowHeight="100" id="Xfa-0D-W9p" customClass="DiceCell" customModule="PruebaDados" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xfa-0D-W9p" id="bYI-DW-9sL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="grT-4k-Yd6">
+                                                    <rect key="frame" x="8" y="8" width="100" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="ss4-Dd-7ju"/>
+                                                        <constraint firstAttribute="height" constant="100" id="vN8-ec-9Vq"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="grT-4k-Yd6" secondAttribute="bottom" constant="8" id="4fn-sY-szY"/>
+                                                <constraint firstItem="grT-4k-Yd6" firstAttribute="leading" secondItem="bYI-DW-9sL" secondAttribute="leading" constant="8" id="Al1-Rx-L7E"/>
+                                                <constraint firstItem="grT-4k-Yd6" firstAttribute="centerY" secondItem="bYI-DW-9sL" secondAttribute="centerY" id="CIB-sX-Xdw"/>
+                                                <constraint firstItem="grT-4k-Yd6" firstAttribute="top" secondItem="bYI-DW-9sL" secondAttribute="top" constant="8" id="DE0-e3-U1R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="diceImage" destination="grT-4k-Yd6" id="ZV5-qV-Ixm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh1-5T-izz">
+                                <rect key="frame" x="0.0" y="636" width="414" height="33"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="RANDOM DICE">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateRandomDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPk-oM-Bwm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hh1-5T-izz" firstAttribute="top" secondItem="sMU-SZ-a8F" secondAttribute="bottom" constant="16" id="AMF-68-LjT"/>
+                            <constraint firstItem="bhn-BD-aPd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ekr-A3-sAk"/>
+                            <constraint firstItem="bhn-BD-aPd" firstAttribute="centerX" secondItem="sMU-SZ-a8F" secondAttribute="centerX" id="FbQ-t3-hnc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p16-yY-NJR" secondAttribute="trailing" constant="8" id="JS7-cM-B2s"/>
+                            <constraint firstItem="p16-yY-NJR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OhH-Mc-qPR"/>
+                            <constraint firstItem="bhn-BD-aPd" firstAttribute="top" secondItem="p16-yY-NJR" secondAttribute="bottom" constant="8" id="QPN-MM-gkh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hh1-5T-izz" secondAttribute="trailing" id="aqb-5O-n27"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sMU-SZ-a8F" secondAttribute="trailing" constant="8" id="h18-ix-dWL"/>
+                            <constraint firstItem="hh1-5T-izz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l5T-gE-NQ8"/>
+                            <constraint firstItem="bhn-BD-aPd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nPI-Y2-nbN"/>
+                            <constraint firstItem="sMU-SZ-a8F" firstAttribute="top" secondItem="bhn-BD-aPd" secondAttribute="bottom" constant="61" id="oBR-HY-sWw"/>
+                            <constraint firstItem="sMU-SZ-a8F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="qnJ-a7-Vrj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="bhn-BD-aPd" id="u4y-Ge-eho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice1" width="107" height="107"/>
+    </resources>
+</document>
